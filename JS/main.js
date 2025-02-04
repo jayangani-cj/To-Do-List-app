@@ -62,7 +62,7 @@ function addTaskToTable(taskText, dateAdded, id, isDone) {
 // Function to add a todo to the database via an API call
 async function addTodoToDatabase(taskText) {
     try {
-        const response = await fetch('http://localhost:5000/api/todos', {
+        const response = await fetch(`${process.env.BACKEND_API}/api/todos`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ async function addTodoToDatabase(taskText) {
 // Function to fetch todos from the database with pagination
 async function fetchTodos() {
     try {
-        const response = await fetch(`http://localhost:5000/api/todos?page=${currentPage}&limit=${itemsPerPage}`);
+        const response = await fetch(`${process.env.BACKEND_API}/api/todos?page=${currentPage}&limit=${itemsPerPage}`);
         const todos = await response.json();
 
         if (currentPage === 1) { 
@@ -114,7 +114,7 @@ async function fetchTodos() {
 // Function to delete todo from the database via an API call
 async function deleteTodoFromDatabase(todoId) {
     try {
-        const response = await fetch(`http://localhost:5000/api/todos/${todoId}`, {
+        const response = await fetch(`${process.env.BACKEND_API}/api/todos/${todoId}`, {
             method: 'DELETE',
         });
 
@@ -131,7 +131,7 @@ async function deleteTodoFromDatabase(todoId) {
 // Function to update todo in the database via an API call
 async function updateTodoInDatabase(todoId, newTaskText) {
     try {
-        const response = await fetch(`http://localhost:5000/api/todos/${todoId}`, {
+        const response = await fetch(`${process.env.BACKEND_API}/api/todos/${todoId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -155,7 +155,7 @@ async function updateTodoInDatabase(todoId, newTaskText) {
 // Function to toggle the "done" status of a todo item
 async function toggleDoneStatus(todoId, button) {
     try {
-        const response = await fetch(`http://localhost:5000/api/todos/${todoId}/done`, {
+        const response = await fetch(`${process.env.BACKEND_API}/api/todos/${todoId}/done`, {
             method: 'PUT',
         });
 
