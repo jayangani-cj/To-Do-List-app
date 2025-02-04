@@ -1,0 +1,47 @@
+Here’s the updated project report including the correct contributions of all team members:  
+
+## **To-Do App Development Report**  
+
+### **Team Members & Contributions:**  
+
+- **H.A.C.J Habaragoda**  
+  - Developed the **HTML** and **JavaScript** for the front end.  
+  - Built the **backend** using **Node.js**.  
+  - Integrated the **MongoDB** database.  
+
+- **H.A.K.M Habaragoda**  
+  - Designed the **CSS** for the front end.  
+  - Led the **project planning**.  
+
+- **H.A.S.R Habaragoda**  
+  - Deployed the application.  
+  - Connected the project to a **domain name** using **Render**.  
+
+- **N.A. Wickramaarachchi**  
+  - Assisted in **backend development**.  
+
+- **M.M. Weerathunga**  
+  - Assisted in **front-end development**.  
+
+- **ADE Navodya **  
+  - Assisted in ** Project Deployemnt**.  
+
+---
+
+### **Technology Stack:**  
+- **Front End:** HTML, CSS, JavaScript  
+- **Back End:** Node.js  
+- **Database:** MongoDB  
+- **Hosting & Deployment:** Render  
+
+---
+
+### **Project Features:**  
+✔️ Task creation, updating, and deletion.  
+✔️ User-friendly interface with CSS styling.  
+✔️ Data storage and retrieval using MongoDB.  
+✔️ Hosted on Render with a connected domain.  
+
+---
+
+This version now accurately reflects everyone's contributions. Let me know if you need any more changes! 🚀
