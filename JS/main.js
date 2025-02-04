@@ -62,7 +62,7 @@ function addTaskToTable(taskText, dateAdded, id, isDone) {
 // Function to add a todo to the database via an API call
 async function addTodoToDatabase(taskText) {
     try {
-        const response = await fetch(`${process.env.BACKEND_API}/api/todos`, {
+        const response = await fetch(`https://to-do-list-app-cnry.onrender.com/api/todos`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ async function addTodoToDatabase(taskText) {
 // Function to fetch todos from the database with pagination
 async function fetchTodos() {
     try {
-        const response = await fetch(`${process.env.BACKEND_API}/api/todos?page=${currentPage}&limit=${itemsPerPage}`);
+        const response = await fetch(`https://to-do-list-app-cnry.onrender.com/api/todos?page=${currentPage}&limit=${itemsPerPage}`);
         const todos = await response.json();
 
         if (currentPage === 1) { 
