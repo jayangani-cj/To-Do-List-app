@@ -85,10 +85,11 @@ async function addTodoToDatabase(taskText) {
     }
 }
 
-// Function to fetch todos from the database with pagination ?page=${currentPage}&limit=${itemsPerPage}
+// Function to fetch todos from the database with pagination 
 async function fetchTodos() {
+    console.log("Fetching")
     try {
-        const response = await fetch(`https://to-do-list-app-cnry.onrender.com/api/todos?page=1&limit=1`);
+        const response = await fetch(`https://to-do-list-app-cnry.onrender.com/api/todos?page=${currentPage}&limit=${itemsPerPage}`);
         const todos = await response.json();
 
         if (currentPage === 1) { 
