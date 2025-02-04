@@ -28,6 +28,7 @@ const Todo = mongoose.model("Todo", todoSchema);
 
 // 📝 Create a new Todo
 app.post("/api/todos", async (req, res) => {
+    console.log("Saving the Todo")
     try {
         const { task } = req.body;
         if (!task) return res.status(400).json({ message: "Task is required" });
