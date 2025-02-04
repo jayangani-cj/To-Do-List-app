@@ -91,7 +91,7 @@ async function fetchTodos() {
     try {
         const response = await fetch(`https://to-do-list-app-cnry.onrender.com/api/todos?page=${currentPage}&limit=${itemsPerPage}`);
         const todos = await response.json();
-        console.log("Logs : ", todos);
+        console.log("Logs : ", todos.todos);
 
         if (currentPage === 1) { 
             todoList.innerHTML = '';
