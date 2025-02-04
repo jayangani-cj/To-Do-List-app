@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(`${process.env.MONGO_URI}/todo-list`)
     .then(() => console.log("✅ MongoDB connected"))
     .catch(err => console.log("❌ MongoDB connection error:", err));
 
