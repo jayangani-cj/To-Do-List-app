@@ -90,7 +90,7 @@ async function fetchTodos() {
     try {
         const response = await fetch(`https://to-do-list-app-cnry.onrender.com/api/todos?page=${currentPage}&limit=${itemsPerPage}`);
         const todosData = await response.json();
-        const todos = todos.todos;
+        const todos = todosData.todos;
 
         if (currentPage === 1) { 
             todoList.innerHTML = '';
